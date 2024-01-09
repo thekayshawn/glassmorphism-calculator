@@ -1,0 +1,103 @@
+:root {
+  --gap-base: 1rem;
+  --padding-base: 2rem;
+  --border-radius-base: 1rem;
+  --blur-base: 1rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.5rem;
+  --border-base: 1px solid rgba(255, 255, 255, 0.5);
+
+  font-size: 16px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: var(--padding-base);
+  background: linear-gradient(45deg, blue 0%, pink 100%);
+}
+
+main {
+  padding: var(--padding-base);
+  border: var(--border-base);
+  border-radius: var(--border-radius-base);
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(var(--blur-base));
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-base);
+}
+
+input,
+button {
+  border: var(--border-base);
+  border-radius: var(--border-radius-base);
+  padding: var(--padding-base);
+  font-size: var(--font-size-large);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(var(--blur-base));
+
+  &:hover,
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+button {
+  cursor: pointer;
+
+  &:active {
+    background-color: rgba(255, 255, 255, 1);
+  }
+}
+
+button.bg-primary {
+  &:hover,
+  &:focus {
+    background-color: rgba(255, 255, 0, 0.75);
+  }
+
+  &:active {
+    background-color: rgba(255, 255, 0, 1);
+  }
+}
+
+button.bg-secondary {
+  &:hover,
+  &:focus {
+    background-color: rgba(255, 0, 0, 0.75);
+  }
+
+  &:active {
+    background-color: rgba(255, 0, 0, 1);
+  }
+}
+
+form .buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap-base);
+}
+
+/* Utilities */
+.bg-primary {
+  background-color: rgba(255, 255, 0, 0.5);
+}
+
+.bg-secondary {
+  background-color: rgba(255, 0, 0, 0.5);
+}

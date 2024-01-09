@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glassmorphism Calculator</title>
+    <link rel="stylesheet" href="../index.css" />
+  </head>
+  <body>
+    <main>
+      <form onsubmit="handleSubmit(event)">
+        <input type="text" name="display" id="display_input" onkeydown="handleInputKeyDown(event)" />
+        <div class="buttons">
+          <button type="button" onclick="handleButtonClick('7')">7</button>
+          <button type="button" onclick="handleButtonClick('8')">8</button>
+          <button type="button" onclick="handleButtonClick('9')">9</button>
+          <button type="button" onclick="handleButtonClick('/')" class="bg-primary">/</button>
+          <button type="button" onclick="handleButtonClick('4')">4</button>
+          <button type="button" onclick="handleButtonClick('5')">5</button>
+          <button type="button" onclick="handleButtonClick('6')">6</button>
+          <button type="button" onclick="handleButtonClick('*')" class="bg-primary">*</button>
+          <button type="button" onclick="handleButtonClick('1')">1</button>
+          <button type="button" onclick="handleButtonClick('2')">2</button>
+          <button type="button" onclick="handleButtonClick('3')">3</button>
+          <button type="button" onclick="handleButtonClick('-')" class="bg-primary">-</button>
+          <button type="button" onclick="handleButtonClick('0')">0</button>
+          <button type="button" onclick="handleButtonClick('.')" class="bg-primary">.</button>
+          <button type="submit" class="bg-secondary">=</button>
+          <button type="button" onclick="handleButtonClick('+')" class="bg-primary">+</button>
+        </div>
+        <button type="button" onclick="handleClearButtonClick()" id="clear_button" class="bg-primary">
+          Clear
+        </button>
+      </form>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
